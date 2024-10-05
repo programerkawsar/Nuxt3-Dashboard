@@ -1,0 +1,44 @@
+{
+  "ar": {
+    "code": "ar",
+    "name": "عربي",
+    "country": "Saudi Arabia",
+    "iso": "ar-SA",
+    "file": "ar-SA.json"
+  },
+  "de": {
+    "code": "de",
+    "name": "Deutsch",
+    "country": "Germany",
+    "iso": "de-DE",
+    "file": "de-DE.json"
+  },
+  "en": {
+    "code": "en",
+    "name": "English",
+    "country": "United States",
+    "iso": "en-US",
+    "file": "en-US.json"
+  },
+  "es": {
+    "code": "es",
+    "name": "Española",
+    "country": "Spain",
+    "iso": "es-ES",
+    "file": "es-ES.json"
+  },
+  "fr": {
+    "code": "fr",
+    "name": "Français",
+    "country": "France",
+    "iso": "fr-FR",
+    "file": "fr-FR.json"
+  },
+  "pt": {
+    "code": "pt",
+    "name": "Português",
+    "country": "Portugal",
+    "iso": "pt-PT",
+    "file": "pt-PT.json"
+  }
+}

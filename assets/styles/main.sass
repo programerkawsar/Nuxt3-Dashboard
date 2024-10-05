@@ -1,0 +1,181 @@
+::-webkit-scrollbar
+  width: 5px
+  height: 5px
+
+::-webkit-scrollbar-track
+  background: rgb(var(--v-theme-black), 0.4)
+
+::-webkit-scrollbar-thumb
+  background: rgb(var(--v-theme-black))
+  border-radius: 5px
+  cursor: pointer
+
+::-webkit-scrollbar-thumb:hover
+  background: rgb(var(--v-theme-black), 0.8)
+
+.d-fixed
+  position: fixed
+
+.cursor-pointer
+  cursor: pointer
+
+.icon-opacity-0 .v-icon
+  opacity: 1 !important
+
+.label-opacity-0 .v-label 
+  opacity: 1 !important
+
+.expand-icon--black 
+  .v-field__append-inner .v-icon
+    opacity: 1 !important
+
+  .v-list-item__append .v-icon
+    opacity: 1 !important
+
+.otp-input-rounded .v-field
+  border-radius: 10px
+
+.data-table--customized
+  .v-data-table__thead tr th
+    padding: 0 24px !important
+
+  .v-data-table__tbody tr td
+    padding: 12px 24px !important
+
+.pagination--customized .v-pagination__item .v-btn--disabled
+  opacity: 1
+  font-size: 18px
+
+.loading-section-resized .v-infinite-scroll__side
+  padding: 0
+  margin: 0 -15px
+
+.hide-apexchart-toolbar .apexcharts-toolbar
+  display: none !important
+
+.table-th--black table tr th
+  background-color: rgb(var(--v-theme-white)) !important
+
+.chart-customized
+  .apexcharts-yaxis tspan
+    fill: rgb(var(--v-theme-black)) !important
+
+  .apexcharts-xaxis tspan
+    fill: rgb(var(--v-theme-black)) !important
+
+  .apexcharts-legend-series 
+    .apexcharts-legend-marker
+      margin-right: 6px !important
+    
+    .apexcharts-legend-text
+      color: rgb(var(--v-theme-black)) !important
+  
+  .apexcharts-tooltip
+    border-radius: 12px
+    background-color: rgb(var(--v-theme-white)) !important
+
+    .apexcharts-tooltip-title
+      color: rgb(var(--v-theme-white)) !important
+      background-color: rgb(var(--v-theme-black)) !important
+      padding: 6px 12px
+    
+  .apexcharts-xaxistooltip
+    border-radius: 25px !important
+    background-color: rgb(var(--v-theme-black)) !important
+    color: rgb(var(--v-theme-white)) !important
+    border: none !important
+    padding: 8px 16px !important
+  
+  .apexcharts-xaxistooltip::before
+    display: none !important
+  
+  .apexcharts-xaxistooltip::after
+    display: none !important
+
+.editor .input
+  min-height: 300px
+  max-height: 600px
+
+  .ProseMirror
+    width: 100%
+    min-height: 300px
+    max-height: 600px
+    border-radius: 24px
+    border: 1px solid rgb(var(--v-theme-black), 0.4)
+    padding: 14px 20px
+    transition: 0.3s
+    overflow-y: auto
+
+    ul, ol
+      margin-left: 15px
+
+    blockquote
+      background: transparent
+      border-left: 4px solid rgb(var(--v-theme-black), 0.2)
+      margin: 10px
+      padding: 10px
+      quotes: "\201C""\201D""\2018""\2019"
+
+    blockquote:before
+      color: rgb(var(--v-theme-black), 0.2)
+      content: open-quote
+      font-size: 50px
+      line-height: 20px
+      margin-right: 10px
+      vertical-align: -15px
+
+    blockquote p
+      display: inline
+
+    pre
+      background: rgb(var(--v-theme-black))
+      color: rgb(var(--v-theme-white))
+      font-family: 'JetBrainsMono', monospace
+      padding: 0.75rem 1rem
+      border-radius: 0.5rem
+
+      code
+        color: inherit
+        padding: 0
+        background: none
+        font-size: 0.8rem
+
+  .ProseMirror:hover
+    border: 1px solid rgb(var(--v-theme-black))
+
+  .ProseMirror p.is-editor-empty:first-child::before
+    content: attr(data-placeholder)
+    float: left
+    color: rgb(var(--v-theme-black), 0.6)
+    pointer-events: none
+    height: 0
+
+.customized-pie-chart-labels .apexcharts-legend-text
+  padding-left: 20px
+  color: rgb(var(--v-theme-black)) !important
+
+.v-locale--is-rtl
+  .chart-customized 
+    .apexcharts-legend .apexcharts-legend-series .apexcharts-legend-marker
+      margin-right: 0
+      margin-left: 6px
+    
+    .apexcharts-tooltip .apexcharts-tooltip-series-group
+      text-align: right
+      justify-content: right
+
+      .apexcharts-tooltip-marker
+        margin-right: 0
+        margin-left: 10px
+
+  .customized-pie-chart-labels .apexcharts-legend-text
+    margin-left: 0
+    margin-right: 8px
+
+@media only screen and (max-width: 599px)
+  //
+
+@media only screen and (min-width: 600px)
+  .customized-pie-chart-labels .apexcharts-legend
+    justify-content: center !important
+    top: 0 !important

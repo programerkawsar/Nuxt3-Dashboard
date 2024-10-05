@@ -1,0 +1,10 @@
+{
+  "redirectionError.title": "Por favor, siga para o novo local",
+  "redirectionError.subtitle": "Encontramos um problema de redirecionamento ao processar sua solicitação. Verifique o URL ou tente novamente mais tarde.",
+  "clientError.title": "Não foi possível concluir a solicitação",
+  "clientError.subtitle": "Houve um problema com sua solicitação. Verifique os detalhes e tente novamente ou entre em contato com o suporte se o problema persistir.",
+  "serverError.title": "O sistema encontrou um problema inesperado",
+  "serverError.subtitle": "Estamos enfrentando problemas no servidor no momento. Por favor, tente novamente mais tarde ou entre em contato com o suporte se o problema persistir.",
+  "pageNotFoundError.title": "Ops! Esta página não está disponível",
+  "pageNotFoundError.subtitle": "Não conseguimos encontrar a página que você está procurando. Por favor, tente novamente ou entre em contato com um administrador se o problema persistir."
+}

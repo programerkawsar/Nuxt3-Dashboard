@@ -1,0 +1,63 @@
+[
+  {
+    "countryName": "United States of America",
+    "currencyName": "USD",
+    "currencySymbol": "$"
+  },
+  {
+    "countryName": "European Union",
+    "currencyName": "EUR",
+    "currencySymbol": "€"
+  },
+  {
+    "countryName": "United Kingdom",
+    "currencyName": "GBP",
+    "currencySymbol": "£"
+  },
+  { "countryName": "Japan", "currencyName": "JPY", "currencySymbol": "¥" },
+  { "countryName": "Canada", "currencyName": "CAD", "currencySymbol": "$" },
+  { "countryName": "Australia", "currencyName": "AUD", "currencySymbol": "$" },
+  {
+    "countryName": "Switzerland",
+    "currencyName": "CHF",
+    "currencySymbol": "CHF"
+  },
+  { "countryName": "China", "currencyName": "CNY", "currencySymbol": "¥" },
+  { "countryName": "India", "currencyName": "INR", "currencySymbol": "₹" },
+  { "countryName": "Russia", "currencyName": "RUB", "currencySymbol": "₽" },
+  { "countryName": "Mexico", "currencyName": "MXN", "currencySymbol": "$" },
+  { "countryName": "Brazil", "currencyName": "BRL", "currencySymbol": "R$" },
+  {
+    "countryName": "South Africa",
+    "currencyName": "ZAR",
+    "currencySymbol": "R"
+  },
+  {
+    "countryName": "South Korea",
+    "currencyName": "KRW",
+    "currencySymbol": "₩"
+  },
+  { "countryName": "Singapore", "currencyName": "SGD", "currencySymbol": "$" },
+  {
+    "countryName": "New Zealand",
+    "currencyName": "NZD",
+    "currencySymbol": "$"
+  },
+  { "countryName": "Sweden", "currencyName": "SEK", "currencySymbol": "kr" },
+  { "countryName": "Norway", "currencyName": "NOK", "currencySymbol": "kr" },
+  { "countryName": "Denmark", "currencyName": "DKK", "currencySymbol": "kr" },
+  { "countryName": "Turkey", "currencyName": "TRY", "currencySymbol": "₺" },
+  {
+    "countryName": "Saudi Arabia",
+    "currencyName": "SAR",
+    "currencySymbol": "﷼"
+  },
+  {
+    "countryName": "United Arab Emirates",
+    "currencyName": "AED",
+    "currencySymbol": "د.إ"
+  },
+  { "countryName": "Malaysia", "currencyName": "MYR", "currencySymbol": "RM" },
+  { "countryName": "Thailand", "currencyName": "THB", "currencySymbol": "฿" },
+  { "countryName": "Indonesia", "currencyName": "IDR", "currencySymbol": "Rp" }
+]
