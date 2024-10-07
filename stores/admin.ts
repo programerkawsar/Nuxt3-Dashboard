@@ -102,9 +102,9 @@ export const useAdminStore = defineStore('adminStore', {
           href: '/admin/pages',
         },
         {
-          icon: 'global',
-          title: 'label.notifications',
-          href: '/admin/notifications',
+          icon: 'help',
+          title: 'label.supportRequests',
+          href: '/admin/support-requests',
           count: 5500,
         },
         {
@@ -148,14 +148,6 @@ export const useAdminStore = defineStore('adminStore', {
               title: 'label.externalCode',
               href: '/admin/settings/external-code',
             },
-            {
-              title: 'label.sitemapXML',
-              href: '/admin/settings/sitemap-xml',
-            },
-            {
-              title: 'label.robotsTXT',
-              href: '/admin/settings/sitemap-xml',
-            },
           ],
         },
         {
@@ -165,6 +157,10 @@ export const useAdminStore = defineStore('adminStore', {
             {
               title: 'label.overview',
               href: '/admin/system/overview',
+            },
+            {
+              title: 'label.maintenanceMode',
+              href: '/admin/system/maintenance-mode',
             },
             {
               title: 'label.countryRestriction',

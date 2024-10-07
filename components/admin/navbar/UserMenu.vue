@@ -3,11 +3,10 @@
     <template #activator="{ props }">
       <v-btn v-bind="props" color="black" variant="text" class="ms-1" icon>
         <v-avatar :size="38" color="primary">
-          <NuxtImg
-            :width="40"
-            :height="40"
-            preset="avatar"
+          <v-img
             src="/images/default-avatar.jpg"
+            lazy-src="/images/default-avatar.jpg"
+            alt="User Avatar"
           />
         </v-avatar>
       </v-btn>
@@ -17,11 +16,10 @@
         <v-list-item base-color="black" lines="one" class="pa-0">
           <template #prepend>
             <v-avatar :size="60" color="primary">
-              <NuxtImg
-                :width="80"
-                :height="80"
-                preset="avatar"
+              <v-img
                 src="/images/default-avatar.jpg"
+                lazy-src="/images/default-avatar.jpg"
+                alt="User Avatar"
               />
             </v-avatar>
           </template>

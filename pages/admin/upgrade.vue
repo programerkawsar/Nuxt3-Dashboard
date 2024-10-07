@@ -37,7 +37,7 @@
       </v-btn>
     </v-card>
     <v-infinite-scroll
-      class="loading-section-resized"
+      class="loading-section-resized overflow-x-hidden"
       :items="list"
       :onLoad="loadMore"
     >

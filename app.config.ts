@@ -193,6 +193,7 @@ export default defineAppConfig({
       highlighter: 'ph:highlighter-light',
       'arrow-up': 'solar:arrow-up-linear',
       'arrow-down': 'solar:arrow-down-linear',
+      help: 'solar:help-outline',
     },
   },
 })
