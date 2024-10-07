@@ -75,10 +75,8 @@
       <div class="ma-3" />
       <v-sheet
         color="white"
-        :class="`save-btn--section pt-6 pb-12 ${
-          !showSaveBtn
-            ? 'save-btn-section--show pb-12'
-            : 'save-btn-section--hide'
+        :class="`save-btn--section py-6 ${
+          !showSaveBtn ? 'save-btn-section--show' : 'save-btn-section--hide'
         }`"
       >
         <v-btn

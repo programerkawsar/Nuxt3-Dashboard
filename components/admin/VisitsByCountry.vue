@@ -3,15 +3,10 @@
     <div class="d-flex align-center pa-6">
       <di class="pe-6">
         <h3 class="text-body-1 font-weight-bold">
-          {{ $t('visitsByCountry.title') }}
+          {{ $t('visitsByCounties.title') }}
         </h3>
         <p class="text-body-2 text-medium-emphasis">
-          {{
-            $t('visitsByCountry.subtitle', {
-              numOfCountries: 20,
-              percentage: 97,
-            })
-          }}
+          {{ $t('visitsByCounties.subtitle') }}
         </p>
       </di>
       <v-spacer />
@@ -59,18 +54,25 @@
         v-if="items.length !== 0"
         color="black"
         class="pa-0 bg-transparent"
+        lines="two"
       >
         <v-list-item v-for="(item, idx) in items" :key="idx" class="pa-0">
           <template #prepend>
-            <v-avatar :size="24">
-              <Icon :name="`circle-flags:${item.abbreviation.toLowerCase()}`" />
+            <v-avatar :size="30">
+              <Icon
+                :name="`circle-flags:${item.abbreviation.toLowerCase()}`"
+                size="30px"
+              />
             </v-avatar>
           </template>
-          <v-list-item-title>{{ item.countryName }}</v-list-item-title>
+          <v-list-item-title class="font-weight-bold">
+            {{ abbreviateNumber(item.numOfVisits) }}
+          </v-list-item-title>
+          <v-list-item-subtitle>{{ item.countryName }}</v-list-item-subtitle>
           <template #append>
-            <h3 class="text-body-1 font-weight-bold">
-              {{ abbreviateNumber(item.numOfVisits) }}
-            </h3>
+            <v-chip color="success">
+              <Icon name="arrow-up" size="18px" />12%
+            </v-chip>
           </template>
         </v-list-item>
       </v-list>

@@ -2,17 +2,24 @@
   <v-navigation-drawer
     v-model="sidebar"
     color="white"
-    :width="320"
+    :width="isMobile ? drawerWidth : 320"
     :scrim="false"
   >
     <template #prepend>
-      <v-sheet
-        color="transparent"
-        class="d-flex align-center justify-center"
-        :height="80"
-      >
-        <NuxtImg loading="lazy" :src="logo" />
-      </v-sheet>
+      <AdminCornerCloseBtn
+        v-if="showCloseBtn && sidebar"
+        class="close-sidebar--btn"
+        @click="adminStore.toggleSidebar()"
+      />
+      <div class="pa-6">
+        <v-img
+          class="mx-auto"
+          :width="80"
+          :src="logo"
+          :lazy-src="logo"
+          alt="Logo"
+        />
+      </div>
     </template>
     <v-list
       class="px-6 py-0"
@@ -84,10 +91,15 @@ interface Link {
   count?: number
 }
 
+const { name, width: drawerWidth } = useDisplay()
 const localePath = useLocalePath()
 const theme = useTheme()
 const adminStore = useAdminStore()
-const sidebar = ref<boolean>(true)
+
+const showCloseBtn = computed<boolean>(
+  () => name.value === 'xs' || name.value === 'sm' || name.value === 'md'
+)
+const sidebar = ref<boolean>(!showCloseBtn.value)
 
 const isDarkTheme = computed<boolean>(() => {
   return theme?.global?.current?.value?.dark || false
@@ -99,6 +111,14 @@ const logo = computed<string>(() => {
 
 const links = computed<Link[]>(() => adminStore.links.sidebar || [])
 const sidebarState = computed<boolean>(() => adminStore.sidebar)
+const isMobile = computed<boolean>(() => name.value === 'xs')
 
 watch(sidebarState, () => (sidebar.value = !sidebar.value))
 </script>
+
+<style lang="sass" scoped>
+.close-sidebar--btn
+  position: fixed
+  top: -2px
+  right: -2px
+</style>

@@ -11,7 +11,7 @@
     <v-card
       color="white"
       rounded="xl"
-      class="pa-8 text-center mb-12"
+      class="pa-6 pa-sm-8 text-center mb-12"
       flat
       border
     >

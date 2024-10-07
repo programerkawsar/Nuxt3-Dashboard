@@ -13,7 +13,7 @@
       color="transparent"
       variant="flat"
       rounded="xl"
-      class="pa-12 mt-12 text-center"
+      class="pa-6 pa-sm-12 mt-12 text-center"
       border
     >
       <v-avatar color="primary" variant="tonal" class="mb-6" :size="80">

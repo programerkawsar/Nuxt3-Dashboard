@@ -13,7 +13,7 @@
     </div>
     <v-form ref="form" :disabled="loading" @submit.prevent="submit">
       <v-row no-gutters>
-        <v-col cols="12" sm="12" md="6" class="mb-1 pe-3">
+        <v-col cols="12" sm="6" class="mb-1 pe-sm-3">
           <p class="text-black text-body-2 mb-1 ms-4">
             {{ $t('label.invoiceCurrency') }}
           </p>
@@ -52,7 +52,7 @@
             </template>
           </v-select>
         </v-col>
-        <v-col cols="12" sm="12" md="6" class="mb-1 ps-3">
+        <v-col cols="12" sm="6" class="mb-1 ps-sm-3">
           <p class="text-black text-body-2 mb-1 ms-4">
             {{ $t('label.invoiceLanguage') }}
           </p>
@@ -139,7 +139,7 @@
             single-line
           />
         </v-col>
-        <v-col cols="12" sm="12" md="6" class="mb-1 pe-3">
+        <v-col cols="12" sm="6" class="mb-1 pe-sm-3">
           <p class="text-black text-body-2 mb-1 ms-4">
             {{ $t('label.phoneNumber') }}
           </p>
@@ -155,7 +155,7 @@
             single-line
           />
         </v-col>
-        <v-col cols="12" sm="12" md="6" class="mb-1 ps-3">
+        <v-col cols="12" sm="6" class="mb-1 ps-sm-3">
           <p class="text-black text-body-2 mb-1 ms-4">
             {{ $t('label.vatNumber') }}
           </p>
@@ -185,7 +185,7 @@
             single-line
           />
         </v-col>
-        <v-col cols="12" sm="12" md="6" class="mb-1 pe-3">
+        <v-col cols="12" sm="6" class="mb-1 pe-sm-3">
           <p class="text-black text-body-2 mb-1 ms-4">
             {{ $t('label.state') }}
           </p>
@@ -200,7 +200,7 @@
             single-line
           />
         </v-col>
-        <v-col cols="12" sm="12" md="6" class="mb-1 ps-3">
+        <v-col cols="12" sm="6" class="mb-1 ps-sm-3">
           <p class="text-black text-body-2 mb-1 ms-4">
             {{ $t('label.postalCode') }}
           </p>

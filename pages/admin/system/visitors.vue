@@ -69,17 +69,19 @@
           </AdminTableHeader>
         </template>
         <template #item.device="{ item }">
-          <v-list-item base-color="black" class="pa-0">
-            <template #prepend>
-              <Icon :name="getDeviceIcon(item.device.type)" class="me-4" />
-            </template>
-            <p class="text-body-2 font-weight-bold">
-              {{ item.device.name }}
-            </p>
-            <p class="text-body-2 text-medium-emphasis">
-              {{ item.device.browser }}
-            </p>
-          </v-list-item>
+          <v-sheet color="transparent" :min-width="150">
+            <v-list-item base-color="black" class="pa-0">
+              <template #prepend>
+                <Icon :name="getDeviceIcon(item.device.type)" class="me-4" />
+              </template>
+              <p class="text-body-2 font-weight-bold">
+                {{ item.device.name }}
+              </p>
+              <p class="text-body-2 text-medium-emphasis">
+                {{ item.device.browser }}
+              </p>
+            </v-list-item>
+          </v-sheet>
         </template>
         <template #item.createdAt="{ item }">
           <v-sheet color="transparent" :min-width="120">

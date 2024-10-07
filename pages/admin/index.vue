@@ -3,7 +3,7 @@
     <div class="d-flex align-center">
       <v-list-item class="pa-0 ma-0" color="black">
         <template #prepend>
-          <v-avatar theme="light" color="primary" :size="80">
+          <v-avatar theme="light" color="primary" :size="avatarSize">
             <v-img
               v-if="avatarImage"
               :src="avatarImage"
@@ -24,10 +24,10 @@
             </h3>
           </v-avatar>
         </template>
-        <v-list-item-title class="text-h6 mb-1">
+        <v-list-item-title class="text-body-1 text-sm-h6">
           {{ $t('dashboardWelcome.title', { name: 'Erik Kovalsky' }) }}
         </v-list-item-title>
-        <v-list-item-subtitle class="text-body-1">
+        <v-list-item-subtitle class="text-body-2 text-sm-body-1">
           {{ $t('dashboardWelcome.subtitle') }}
         </v-list-item-subtitle>
       </v-list-item>
@@ -37,7 +37,7 @@
         rounded="pill"
         variant="flat"
         size="large"
-        class="text-body-2"
+        class="text-body-2 d-none d-md-flex ms-3"
         to="/admin/account/activity"
       >
         {{ $t('label.viewActivity') }}
@@ -59,5 +59,7 @@ useHead({
   titleTemplate: `%s | ${appName}`,
 })
 
+const { name } = useDisplay()
 const avatarImage = ref<string>('https://i.pravatar.cc/150?img=19')
+const avatarSize = computed<number>(() => (name.value === 'xs' ? 50 : 80))
 </script>

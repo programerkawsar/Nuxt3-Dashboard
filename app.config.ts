@@ -191,6 +191,8 @@ export default defineAppConfig({
       'text-underline': 'ph:text-underline',
       'text-italic': 'ph:text-italic',
       highlighter: 'ph:highlighter-light',
+      'arrow-up': 'solar:arrow-up-linear',
+      'arrow-down': 'solar:arrow-down-linear',
     },
   },
 })
