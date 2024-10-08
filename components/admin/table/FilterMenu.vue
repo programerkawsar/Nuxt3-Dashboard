@@ -59,6 +59,28 @@
           </v-list-item-title>
         </v-list-item>
         <v-list-item
+          v-if="filters.includes('requestStatus')"
+          rounded="xl"
+          :active="filterBy === 'requestStatus'"
+          link
+          @click="filterBy = 'requestStatus'"
+        >
+          <v-list-item-title>
+            {{ $t('text.filterByStatus') }}
+          </v-list-item-title>
+        </v-list-item>
+        <v-list-item
+          v-if="filters.includes('priorityStatus')"
+          rounded="xl"
+          :active="filterBy === 'priorityStatus'"
+          link
+          @click="filterBy = 'priorityStatus'"
+        >
+          <v-list-item-title>
+            {{ $t('text.filterByPriority') }}
+          </v-list-item-title>
+        </v-list-item>
+        <v-list-item
           v-if="filters.includes('timeRange')"
           rounded="xl"
           :active="filterBy === 'timeRange'"

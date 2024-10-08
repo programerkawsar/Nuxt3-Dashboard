@@ -579,5 +579,14 @@
   "label.tickedId": "Ticked ID",
   "label.category": "Category",
   "label.priority": "Priority",
-  "label.open": "Open"
+  "label.open": "Open",
+  "writeMessage.placeholder": "Write Messages",
+  "page.provideResponse.title": "Provide Response",
+  "page.provideResponse.head.title": "Provide Response",
+  "page.provideResponse.subtitle": "Respond Promptly with Insightful Solutions",
+  "label.allPriorities": "All Priorities",
+  "text.filterByPriority": "Filter by priority",
+  "label.high": "High",
+  "label.medium": "Medium",
+  "label.low": "Low"
 }

@@ -21,6 +21,7 @@ export default defineAppConfig({
         black: '#151515',
         white: '#FFFFFF',
         thinGrey: '#FAFAFA',
+        greyLighten3: '#EEEEEE',
       },
     },
     dark: {
@@ -34,6 +35,7 @@ export default defineAppConfig({
         black: '#EAEAEA',
         white: '#151515',
         thinGrey: '#191919',
+        greyLighten3: '#212121',
       },
     },
   },
@@ -194,6 +196,7 @@ export default defineAppConfig({
       'arrow-up': 'solar:arrow-up-linear',
       'arrow-down': 'solar:arrow-down-linear',
       help: 'solar:help-outline',
+      plain: 'solar:plain-outline',
     },
   },
 })

@@ -48,8 +48,13 @@
         </template>
         <template #top>
           <AdminTableHeader
-            active="financialStatus"
-            :filters="['timeRange', 'financialStatus', 'search']"
+            active="requestStatus"
+            :filters="[
+              'timeRange',
+              'requestStatus',
+              'priorityStatus',
+              'search',
+            ]"
             :export="true"
           >
             <template #refreshBtn>

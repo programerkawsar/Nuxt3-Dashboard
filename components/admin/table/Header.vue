@@ -102,6 +102,62 @@
           />
         </template>
       </v-select>
+      <v-select
+        v-if="filters.includes('requestStatus') && filterBy === 'requestStatus'"
+        v-model="status"
+        :label="$t('select.placeholder')"
+        color="black"
+        base-color="black"
+        :items="requestStatus"
+        rounded="pill"
+        item-title="text"
+        variant="outlined"
+        density="compact"
+        class="expand-icon--black"
+        hide-details
+        single-line
+      >
+        <template #item="{ props }">
+          <v-list-item
+            v-bind="props"
+            :item-props="props"
+            base-color="black"
+            color="primary"
+            rounded="xl"
+            class="mx-2"
+            link
+          />
+        </template>
+      </v-select>
+      <v-select
+        v-if="
+          filters.includes('priorityStatus') && filterBy === 'priorityStatus'
+        "
+        v-model="status"
+        :label="$t('select.placeholder')"
+        color="black"
+        base-color="black"
+        :items="priorityStatus"
+        rounded="pill"
+        item-title="text"
+        variant="outlined"
+        density="compact"
+        class="expand-icon--black"
+        hide-details
+        single-line
+      >
+        <template #item="{ props }">
+          <v-list-item
+            v-bind="props"
+            :item-props="props"
+            base-color="black"
+            color="primary"
+            rounded="xl"
+            class="mx-2"
+            link
+          />
+        </template>
+      </v-select>
       <v-date-input
         v-if="filters.includes('timeRange') && filterBy === 'timeRange'"
         v-model="timeRange"
@@ -309,6 +365,40 @@ const financialStatus = ref<{ text: string; value: string }[]>([
   {
     text: t('label.pending'),
     value: 'pending',
+  },
+])
+
+const requestStatus = ref<{ text: string; value: string }[]>([
+  {
+    text: t('label.allStatus'),
+    value: 'all',
+  },
+  {
+    text: t('label.open'),
+    value: 'open',
+  },
+  {
+    text: t('label.pending'),
+    value: 'pending',
+  },
+])
+
+const priorityStatus = ref<{ text: string; value: string }[]>([
+  {
+    text: t('label.allPriorities'),
+    value: 'all',
+  },
+  {
+    text: t('label.high'),
+    value: 'high',
+  },
+  {
+    text: t('label.medium'),
+    value: 'medium',
+  },
+  {
+    text: t('label.low'),
+    value: 'low',
   },
 ])
 
