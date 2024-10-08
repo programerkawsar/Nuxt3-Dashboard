@@ -8,7 +8,7 @@
         {{ $t('page.systemOverview.subtitle') }}
       </p>
     </div>
-    <v-list color="black" class="pa-0 mt-n6">
+    <v-list color="black" class="pa-0 mt-n6 bg-transparent">
       <template v-for="(item, idx) in items" :key="idx">
         <div class="py-6" v-if="item.type">
           <v-divider />

@@ -73,8 +73,8 @@ const alert = reactive<{
 
 const validationRules = reactive({
   required: (v: File[]) => v.length > 0 || t('validationMessage.required'),
-  isJson: (v: File[]) =>
-    !!v[0].name.toLowerCase().endsWith('.json') ||
+  isJson: (v: File | null) =>
+    !!v?.name?.toLowerCase().endsWith('.json') ||
     t('validationMessage.invalidFileFormat', { format: 'JSON' }),
 })
 

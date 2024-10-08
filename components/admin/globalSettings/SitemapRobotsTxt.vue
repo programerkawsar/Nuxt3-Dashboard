@@ -79,17 +79,17 @@ import { VForm } from 'vuetify/components'
 const { t } = useI18n()
 const form = ref(VForm)
 const loading = ref<boolean>(false)
-const xmlSitemap = ref<File[] | null>(null)
-const robotsTxt = ref<File[] | null>(null)
+const xmlSitemap = ref<File | null>(null)
+const robotsTxt = ref<File | null>(null)
 const errMessage = ref<string | null>(null)
 
 const validationRules = reactive({
   required: (v: string) => !!v || t('validationMessage.required'),
-  isXml: (v: File[]) =>
-    !!v[0].name.toLowerCase().endsWith('.xml') ||
+  isXml: (v: File | null) =>
+    !!v?.name?.toLowerCase().endsWith('.xml') ||
     t('validationMessage.invalidFileFormat', { format: 'XML' }),
-  isTxt: (v: File[]) =>
-    !!v[0].name.toLowerCase().endsWith('.txt') ||
+  isTxt: (v: File | null) =>
+    !!v?.name?.toLowerCase().endsWith('.txt') ||
     t('validationMessage.invalidFileFormat', { format: 'TXT' }),
 })
 

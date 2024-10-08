@@ -21,6 +21,7 @@
         </p>
         <v-file-input
           v-model="favIcon"
+          accept="image/*"
           color="black"
           base-color="black"
           :label="$t('fileInput.placeholder')"
@@ -42,6 +43,7 @@
         </p>
         <v-file-input
           v-model="lightLogo"
+          accept="image/*"
           color="black"
           base-color="black"
           :label="$t('fileInput.placeholder')"
@@ -63,6 +65,7 @@
         </p>
         <v-file-input
           v-model="darkLogo"
+          accept="image/*"
           color="black"
           base-color="black"
           :label="$t('fileInput.placeholder')"
@@ -103,15 +106,15 @@ import { VForm } from 'vuetify/components'
 const { t } = useI18n()
 const form = ref(VForm)
 const loading = ref<boolean>(false)
-const favIcon = ref<File[] | null>(null)
-const lightLogo = ref<File[] | null>(null)
-const darkLogo = ref<File[] | null>(null)
+const favIcon = ref<File | null>(null)
+const lightLogo = ref<File | null>(null)
+const darkLogo = ref<File | null>(null)
 const errMessage = ref<string | null>(null)
 
 const validationRules = reactive({
   required: (v: string) => !!v || t('validationMessage.required'),
-  isImage: (v: File[]) => {
-    const isValidMimeType = v[0].type.startsWith('image/')
+  isImage: (v: File | null) => {
+    const isValidMimeType = v?.type?.startsWith('image/') || false
     return (
       isValidMimeType ||
       t('validationMessage.invalidFileFormat', { format: 'image' })

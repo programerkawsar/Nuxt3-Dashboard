@@ -9,6 +9,7 @@ export default defineAppConfig({
     locale: 'en',
   },
   copyrightYear: 2024,
+  indicatorColor: '#10A4B0',
   themes: {
     light: {
       dark: false,
