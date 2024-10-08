@@ -88,7 +88,7 @@
           </template>
         </v-select>
       </v-col>
-      <v-col cols="12">
+      <v-col cols="12" class="mb-1">
         <p class="text-black text-body-2 mb-1 ms-4">
           {{ $t('label.defaultCountry') }}
         </p>
@@ -125,6 +125,37 @@
           </template>
         </v-select>
       </v-col>
+      <v-col cols="12">
+        <p class="text-black text-body-2 mb-1 ms-4">
+          {{ $t('label.defaultTheme') }}
+        </p>
+        <v-select
+          v-model="defaultTheme"
+          :rules="[validationRules.required]"
+          :items="['Light', 'Dark']"
+          :label="$t('select.placeholder')"
+          base-color="black"
+          color="black"
+          rounded="pill"
+          variant="outlined"
+          item-title="country"
+          item-value="abbreviation"
+          class="expand-icon--black"
+          single-line
+        >
+          <template #item="{ item, props }">
+            <v-list-item
+              v-bind="props"
+              :item-props="props"
+              base-color="black"
+              color="primary"
+              rounded="xl"
+              class="mx-2"
+              link
+            />
+          </template>
+        </v-select>
+      </v-col>
       <v-col cols="12" class="mt-3">
         <v-btn
           type="submit"
@@ -156,6 +187,7 @@ const siteName = ref<string>('')
 const siteUrl = ref<string>('')
 const defaultCurrency = ref<string>('USD')
 const defaultCountry = ref<string>('US')
+const defaultTheme = ref<string>('Light')
 const email = ref<string>('')
 const errMessage = ref<string | null>(null)
 

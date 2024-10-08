@@ -42,7 +42,7 @@
           single-line
         />
       </v-col>
-      <v-col cols="12" class="mb-3">
+      <v-col cols="12" class="mb-1">
         <p class="text-black text-body-2 mb-1 ms-4">
           {{ $t('label.yourCountry') }}
         </p>
@@ -79,7 +79,53 @@
           </template>
         </v-select>
       </v-col>
-      <v-col cols="12">
+      <v-col cols="12" class="mb-1">
+        <p class="text-black text-body-2 mb-1 ms-4">
+          {{ $t('label.city') }}
+        </p>
+        <v-text-field
+          v-model="city"
+          :rules="[validationRules.required]"
+          base-color="black"
+          color="black"
+          :label="$t('city.placeholder')"
+          rounded="pill"
+          variant="outlined"
+          single-line
+        />
+      </v-col>
+      <v-col cols="12" sm="6" class="mb-1 pe-sm-3">
+        <p class="text-black text-body-2 mb-1 ms-4">
+          {{ $t('label.state') }}
+        </p>
+        <v-text-field
+          v-model="state"
+          :rules="[validationRules.required]"
+          base-color="black"
+          color="black"
+          :label="$t('state.placeholder')"
+          rounded="pill"
+          variant="outlined"
+          single-line
+        />
+      </v-col>
+      <v-col cols="12" sm="6" class="mb-1 ps-sm-3">
+        <p class="text-black text-body-2 mb-1 ms-4">
+          {{ $t('label.postalCode') }}
+        </p>
+        <v-text-field
+          v-model="postalCode"
+          :rules="[validationRules.required, validationRules.positiveNumber]"
+          type="number"
+          base-color="black"
+          color="black"
+          :label="$t('postalCode.placeholder')"
+          rounded="pill"
+          variant="outlined"
+          single-line
+        />
+      </v-col>
+      <v-col cols="12" class="mt-3">
         <v-btn
           type="submit"
           base-color="primary"
@@ -108,6 +154,9 @@ const loading = ref<boolean>(false)
 const firstName = ref<string>('')
 const lastName = ref<string>('')
 const country = ref<string>('US')
+const city = ref<string>('')
+const state = ref<string>('')
+const postalCode = ref<string>('')
 const errMessage = ref<string | null>(null)
 
 const countries = computed<{ country: string; abbreviation: string }[]>(() => {
@@ -118,6 +167,10 @@ const validationRules = reactive({
   required: (v: string) => !!v || t('validationMessage.required'),
   max: (v: string) =>
     v.length <= 28 || t('validationMessage.maxCharacters', { num: 28 }),
+  positiveNumber: (v: string) => {
+    const numberPattern = /^[0-9]+$/ // Regular expression to check for positive numbers only
+    return numberPattern.test(v) || t('validationMessage.positiveNumber')
+  },
 })
 
 const submit = async () => {

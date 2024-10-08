@@ -588,5 +588,20 @@
   "text.filterByPriority": "Filter by priority",
   "label.high": "High",
   "label.medium": "Medium",
-  "label.low": "Low"
+  "label.low": "Low",
+  "label.move": "Move",
+  "page.frontendMenu.title": "Menu Settings",
+  "page.frontendMenu.head.title": "Menu Settings",
+  "page.frontendMenu.subtitle": "Easily customize & configure detailed options & advanced preferences in the menu settings page for an optimal & seamless user experience.",
+  "label.defaultTheme": "Default Theme",
+  "page.paymentGateways.title": "Payment Gateways",
+  "page.paymentGateways.head.title": "Payment Gateways",
+  "page.paymentGateways.subtitle": "A user-friendly interface for managing and optimizing your payment gateways to accept payments seamlessly and enhance transaction efficiency.",
+  "label.gatewayMode": "Gateway Mode",
+  "label.apiKey": "API Key",
+  "label.clientId": "Client ID",
+  "label.apiSecret": "Api Secret",
+  "page.gatewaySettings.title": "Gateway Settings",
+  "page.gatewaySettings.head.title": "Gateway Settings",
+  "page.gatewaySettings.subtitle": "Set up and customize your payment gateway settings to ensure secure, efficient, and reliable transaction processing across the platform."
 }

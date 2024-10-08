@@ -197,6 +197,8 @@ export default defineAppConfig({
       'arrow-down': 'solar:arrow-down-linear',
       help: 'solar:help-outline',
       plain: 'solar:plain-outline',
+      draggable: 'ri:draggable',
+      info: 'solar:info-circle-outline',
     },
   },
 })
